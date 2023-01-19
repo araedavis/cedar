@@ -1,5 +1,5 @@
 import { IRequestOptions } from '@esri/arcgis-rest-request'
-import { IFeatureSet } from '@esri/arcgis-rest-types'
+import { IFeatureSet } from '@esri/arcgis-rest-feature-service'
 
 export interface IField {
   /**
