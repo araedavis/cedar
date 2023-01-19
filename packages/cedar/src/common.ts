@@ -1,6 +1,3 @@
-import { IRequestOptions } from '@esri/arcgis-rest-request'
-import { IFeatureSet } from '@esri/arcgis-rest-feature-service'
-
 export interface IField {
   /**
    * The name of the filed in the soruce dataset
@@ -60,7 +57,7 @@ export interface IDataset {
   /**
    * Inline data, either a [FeatureSet](https://esri.github.io/arcgis-rest-js/api/common-types/IFeatureSet/), or an array of [features](https://esri.github.io/arcgis-rest-js/api/common-types/IFeature/) or [POJO](http://blog.dreasgrech.com/2012/02/creating-pojos-in-javascript.html)s
    */
-  data?: IFeatureSet | Array<{}>,
+  data?: any | Array<{}>,
   /**
    * [Query parameters](https://developers.arcgis.com/rest/services-reference/query-feature-service-layer-.htm) to apply when fetching data (does not apply to inline data)
    */
@@ -76,7 +73,7 @@ export interface IDataset {
   /**
    * Options to use for requests to this dataset. See: https://esri.github.io/arcgis-rest-js/api/request/IRequestOptions/
    */
-  requestOptions?: IRequestOptions
+  requestOptions?: any
 }
 
 /**

@@ -1,6 +1,4 @@
-import { IFeatureSet } from '@esri/arcgis-rest-feature-service'
-import {} from 'jest'
-import { getChartData, IDataset } from '../src/dataset'
+import { getChartData } from '../src/dataset'
 import * as chartData from './data/chartData'
 import { barJoined } from './data/definitions'
 import {all, Dewitt, Fayetteville, Jordan } from './data/queryResponses'
@@ -12,12 +10,12 @@ describe('when getting chart data', () => {
     })
   })
   describe('when only one dataset', () => {
-    let dataset: IDataset
-    let featureSet: IFeatureSet
+    let dataset: any
+    let featureSet: any
     let expected
     beforeAll(() => {
       // get the query response for all features
-      featureSet = all as IFeatureSet
+      featureSet = all as any
       // set up the expected output
       expected = chartData.bar
     })

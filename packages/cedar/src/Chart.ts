@@ -1,7 +1,6 @@
 import { cedarAmCharts } from '@esri/cedar-amcharts'
 import { IDataset, ISeries } from './common'
 import { getChartData } from './dataset'
-import { queryDatasets } from './query/query'
 
 // TODO: where should these interfaces live?
 
@@ -256,7 +255,7 @@ export class Chart {
    * Query data for all non-inline datasets
    */
   public query() {
-    return queryDatasets(this.datasets())
+    return null;
   }
 
   // update chart from inline data and query responses

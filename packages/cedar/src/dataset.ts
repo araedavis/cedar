@@ -1,4 +1,3 @@
-import { IFeature, IFeatureSet } from '@esri/arcgis-rest-feature-service'
 import { IDataset, ISeries } from './common'
 
 export interface IGetChartDataOptions {
@@ -8,16 +7,16 @@ export interface IGetChartDataOptions {
 
 // if it's a feature set, return the array of features
 // otherwise just return the array of objects that was passed in
-function getFeatures(data: IFeatureSet | Array<{}>) {
-  return (data as IFeatureSet).features ? (data as IFeatureSet).features : data as Array<{}>
+function getFeatures(data: any | Array<{}>) {
+  return (data as any).features ? (data as any).features : data as Array<{}>
 }
 
 // if it's a feature, return the attributes
 // otherwise return the entire object that was passed in
-function getAttributes(row: IFeature | {}) {
+function getAttributes(row: any | {}) {
   /* istanbul ignore else since that only happens when features are mixed with rows */
-  if ((row as IFeature).attributes) {
-    return (row as IFeature).attributes
+  if ((row as any).attributes) {
+    return (row as any).attributes
   } else {
     return row
   }
@@ -47,7 +46,7 @@ function getDatasetData(dataset, datasetsData, name?) {
 // return only the attributes for each feature
 function flattenData(data) {
   const features = getFeatures(data)
-  if (features.length > 0 && (features[0] as IFeature).attributes) {
+  if (features.length > 0 && (features[0] as any).attributes) {
     // these really are features, flatten them before
     return features.map(getAttributes)
   } else {
