@@ -37,7 +37,6 @@ yarn-error.log
 site/build
 
 # Built Files
-dist
 compiled
 
 # Test Build
