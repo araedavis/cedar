@@ -4,7 +4,7 @@ import {
   IQueryFeaturesOptions,
   IQueryFeaturesResponse,
   queryFeatures
-} from '@esri/arcgis-rest-feature-layer'
+} from '@esri/arcgis-rest-feature-service'
 import { IDataset } from '../common'
 import config from '../config'
 import { createQueryParams } from './url'

@@ -67,9 +67,8 @@
     "@esri/cedar-amcharts": "^1.1.0"
   },
   "devDependencies": {
-    "@esri/arcgis-rest-feature-layer": "^2.0.0",
-    "@esri/arcgis-rest-request": "^2.0.0",
-    "@esri/arcgis-rest-types": "^2.0.0",
+    "@esri/arcgis-rest-feature-service": "^4.0.0",
+    "@esri/arcgis-rest-request": "^4.0.0",
     "@types/jest": "^23.3.1",
     "@types/node": "^10.5.7",
     "jest": "^23.5.0",
@@ -87,8 +86,7 @@
     "typescript": "^3.0.1"
   },
   "peerDependencies": {
-    "@esri/arcgis-rest-feature-layer": "^2.0.0",
-    "@esri/arcgis-rest-request": "^2.0.0",
-    "@esri/arcgis-rest-types": "^2.0.0"
+    "@esri/arcgis-rest-feature-service": "^4.0.0",
+    "@esri/arcgis-rest-request": "^4.0.0"
   }
 }
